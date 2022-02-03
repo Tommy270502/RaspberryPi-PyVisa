@@ -1,3 +1,18 @@
+#############################################
+#
+# Filename: DSO control.py
+#
+# Project  : RaspberryPi-PyVisa
+# Hardware : Raspberry Pi 
+#
+# Description:
+# A easy to use User Interface to control your DSO.
+#
+# Date:       Author:           Version
+# 03.02.2022  Thomas S. Perri   V1.0
+#
+##############################################
+
 import os
 import time
 import pyvisa
@@ -9,14 +24,14 @@ def clear():
 
 
 rm = pyvisa.ResourceManager()
-DSO = rm.open_resource('USB0::6833::1230::DS1ZC222702142::0::INSTR')
+DSO = rm.open_resource('YOURUSBDEVICE')
 
 print(clear())
 time.sleep(0.5)
 
 print("DSO control panel")
 print("-------------------------------------------------")
-# Setup Rigol Digital Signal Oszilloscope
+# Setup Digital Signal Oszilloscope
 #set: Auto scale the DSO
 #DSO.write(':AUToscale')
 #READ USER INPUTS
