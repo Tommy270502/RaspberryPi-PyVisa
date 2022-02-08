@@ -63,7 +63,7 @@ def measureCap():
     return cap
 
 rm = pyvisa.ResourceManager()
-DMM = rm.open_resource('USB0::6833::2500::DM3R233702464::0::INSTR')
+DMM = rm.open_resource('INSERT YOUR RESOURCE HERE')
 
 print(clear())
 time.sleep(0.5)
